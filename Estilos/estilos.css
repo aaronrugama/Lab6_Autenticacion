@@ -1,0 +1,317 @@
+/* ==========================================
+   LabLogin UTP - Estilos Globales
+   ========================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* --- Contenedores de formulario --- */
+.form-container,
+.login-container,
+.container,
+.qr-container {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 450px;
+}
+
+.login-container,
+.container {
+    max-width: 400px;
+}
+
+.qr-container {
+    text-align: center;
+    max-width: 400px;
+}
+
+/* --- Títulos --- */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 22px;
+}
+
+/* --- Fieldsets e inputs --- */
+fieldset {
+    border: none;
+    margin-bottom: 15px;
+}
+
+legend {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+input[type=text],
+input[type=email],
+input[type=password] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border 0.3s;
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=password]:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* --- Input especial para código 2FA --- */
+.input-codigo {
+    font-size: 22px;
+    text-align: center;
+    letter-spacing: 8px;
+}
+
+/* --- Botones --- */
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background: #2980b9;
+}
+
+.btn-verde {
+    background: #27ae60;
+}
+
+.btn-verde:hover {
+    background: #219a52;
+}
+
+/* --- Mensajes de error --- */
+.error-msg {
+    background: #fde8e8;
+    color: #c0392b;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 13px;
+    text-align: center;
+}
+
+/* --- Mensajes de validación jQuery --- */
+label.error {
+    color: red;
+    font-size: 12px;
+    display: block;
+    margin-top: 3px;
+}
+
+label.valid {
+    color: green;
+    font-size: 12px;
+}
+
+/* --- Links de navegación --- */
+.link-registro,
+.link-login,
+.link-volver {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 13px;
+    color: #777;
+}
+
+.link-registro a,
+.link-login a,
+.link-volver a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+/* --- Tip informativo --- */
+.tip {
+    background: #eaf4fb;
+    border-left: 4px solid #3498db;
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: #555;
+    text-align: left;
+}
+
+/* --- Subtítulo --- */
+.subtitulo {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* --- Ícono grande --- */
+.icono {
+    font-size: 50px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* --- QR --- */
+.qr-container img {
+    border: 3px solid #3498db;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.qr-label {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #777;
+}
+
+.btn-login-link {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 25px;
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.btn-login-link:hover {
+    background: #2980b9;
+}
+
+/* --- Mensaje de estado AJAX --- */
+#mensaje-estado,
+#mensaje-correo {
+    font-size: 13px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* --- Navbar del dashboard --- */
+.navbar {
+    background: #2c3e50;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar h2 {
+    color: white;
+    font-size: 18px;
+}
+
+.navbar a {
+    color: #e74c3c;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 16px;
+    border: 1px solid #e74c3c;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.navbar a:hover {
+    background: #e74c3c;
+    color: white;
+}
+
+/* --- Contenido del dashboard --- */
+.contenido {
+    max-width: 800px;
+    margin: 80px auto 50px auto;
+    padding: 0 20px;
+    display: block;
+}
+
+body.dashboard {
+    display: block;
+    background: #f0f2f5;
+}
+
+.card {
+    background: white;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.card h1 {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.info-item {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+}
+
+.info-item span {
+    font-size: 12px;
+    color: #777;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.info-item strong {
+    color: #2c3e50;
+    font-size: 15px;
+}
+
+.badge-seguro {
+    display: inline-block;
+    background: #27ae60;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-top: 15px;
+}
